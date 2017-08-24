@@ -31,7 +31,9 @@ body,html {
 
 /* START Navigation panel */
 .side-nav{
+    color: white;
     display: flex;
+    flex-direction: column;
     background-color: #2b2f3e;
     width: 220px;
     height: 100%;
@@ -184,4 +186,16 @@ body,html {
 {
 
     background-color: #47568c;
+}
+.menu-text {
+    font-family: "Open Sans",sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #424655;
+}
+.side-nav-menu{
+    background-color: #ff3753;
+    margin-top: 50px;
+    padding: 15px;
 }
