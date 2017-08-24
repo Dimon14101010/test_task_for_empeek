@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body ng-app="myApp">
+<div class="main-wrapper">
+<div class="side-nav"></div>
+<div class="wrapper">
+<div class="card-panel" ng-controller="DashboardCtrl as dc">
+    <h2 class="card-panel-title" align="left">Items here</h2>
+    <form name="form" class="add-new-item-form">
+        <input class="input-items" type="text" name="item" ng-model="item" placeholder="Type name here...">
+        <div class="add-new-item-btn" ng-click="createItems(item)">Add new</div>
+    </form>
+    <div class="inner-list">
+        <div class="inner-list-content" ng-repeat="innerItem in items track by $index">
+            <div class="inner-list-item">
+                <div class="inner-list-item-value">
+                    {{ innerItem }}
+                    <span class="inner-list-item-value-badge">142</span>
+                </div>
+                <div ng-click="items.splice($index,1)" class="delete-btn">Delete</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    <div class="card-panel" ng-controller="DashboardCtrl as dc">
+        <h2 class="card-panel-title" align="left">Comments here</h2>
+        <div class="inner-list-content" ng-repeat="innerComment in comments track by $index">
+        <div class="inner-list-item"><div class="block-list-comment"></div>
+            <div class="inner-list-comment-value">{{ innerComment }}</div>
+        </div>
+
+    </div>
+        <form name="form" class="add-new-item-form" ng-submit="createComments(comment)">
+
+        <div class="block-list-comment"></div>
+            <textarea wrap="soft" class="input-comments" ng-keypress="createComments(comment)" ng-model="comment"></textarea>
+
+        </form>
+        <div class="inner-list">
+
+    </div>
+
+
+
+    </div>
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="app/core.module.js"></script>
+<script src="app/dashboard.controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* START basic layout */
+
+body,html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-size: 14px;
+}
+
+*{
+    transition: all 0.3s ease-out;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.wrapper{
+    width: calc(100% - 220px);
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+/* -- END basic layout */
+
+
+/* START Navigation panel */
+.side-nav{
+    display: flex;
+    background-color: #2b2f3e;
+    width: 220px;
+    height: 100%;
+}
+/* -- END Navigation panel */
+
+
+/* START Cards */
+.card-panel{
+    display: inline-table;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.35);
+    border-radius: 5px;
+    width: 500px;
+    margin: 20px 5px 20px 20px;
+    padding-bottom: 50px;
+    min-height: 60%;
+}
+.card-panel-title{
+    padding: 5px 10px 5px 20px;
+    margin: 5px 0;
+    font-weight: 300;
+}
+.add-new-item-form{
+    padding: 5px 10px 5px 20px;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+}
+.add-new-item-form input.input-items{
+    outline: 0;
+    border: 2px solid rgba(0,0,0,0.15);
+    padding: 5px;
+    border-radius: 4px;
+    width: calc(100% - 110px);
+}
+.add-new-item-form textarea.input-comments{
+    resize: none;
+    outline: 0;
+    border: 2px solid rgba(0,0,0,0.15);
+    padding: 5px;
+    border-radius: 4px;
+    width: calc(100% - 10px);
+    height: 50px;
+    wrap-option: true;
+}
+
+.add-new-item-form input.input-items:focus{
+    border-color: #27ccc0;
+}
+.add-new-item-btn{
+    background-color: #27ccc0;
+    color: white;
+    border-radius: 4px;
+    margin-left: 10px;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+}
+.add-new-item-btn:hover{
+    background-color: #11a79c;
+    cursor: pointer;
+}
+
+.inner-list{
+    width: 500px;
+    margin: 10px 0;
+}
+.inner-list-content{
+    padding-left: calc(20px - 4px);
+    padding-right: 10px;
+    border-left: 4px solid transparent;
+}
+.inner-list-content:hover{
+    border-color: #ff3852;
+    background-color: #eee;
+    cursor: pointer;
+}
+.inner-list-item{
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 5px 0;
+    align-items: flex-start;
+}
+.delete-btn {
+    background-color: #fff;
+    border: 2px solid #ff3852;
+    color: #ff3852;
+    border-radius: 4px;
+    margin-left: 10px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+}
+.delete-btn:hover{
+    color: #fff;
+    background-color: #ff3852;
+    cursor: pointer;
+}
+.inner-list-item-value{
+    word-break: break-all;
+    width: calc(100% - 80px);
+    font-weight: bold;
+}
+.inner-list-comment-value{
+    white-space: pre-wrap;
+    margin-top: -5px;
+    word-break: break-all;
+    width: calc(100% - 10px);}
+
+.inner-list-item-value-badge{
+    color: #fff;
+    font-size: 13px;
+    background-color: #27ccc0;
+    border-radius: 15px;
+    padding: 2px 8px;
+    margin-left: 10px;
+    text-align: center;
+    display: inline-block;
+}
+/* --END Cards */
+
+
+
+.comment{
+    display: inline-table;
+    border: 2px solid gray;
+    border-radius: 5px;
+    width: 45%;
+    margin: 20px 0px 0px 10px;
+    padding-bottom: 50px;
+    height: 50%;
+}
+.block-list-comment
+{
+    display: flex;
+    background-color: gray;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.inner-list-content:nth-child(even) .block-list-comment
+{
+
+    background-color: #ff8a00;
+}
+.inner-list-content:nth-child(odd) .block-list-comment
+{
+
+    background-color: #47568c;
+}
